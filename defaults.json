@@ -44,10 +44,6 @@
     ]
   },
   "forkProcessing": "enabled",
-  "timezone": "America/Los_Angeles",
-  "schedule": [
-    "before 6am"
-  ],
   "customManagers": [
     {
       "customType": "regex",
