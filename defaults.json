@@ -14,10 +14,10 @@
   ],
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
-   "gitIgnoredAuthors": ["github@glueops.dev"],
+   "gitIgnoredAuthors": ["github@glueops.dev", "vendors@glueops.dev"],
   "rebaseWhen": "behind-base-branch",
   "dependencyDashboardAutoclose": true,
-  "dependencyDashboard": false,
+  "dependencyDashboard": true,
   "recreateWhen": "always",
   "argocd": {
     "fileMatch": [
