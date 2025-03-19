@@ -12,6 +12,12 @@
   "labels": [
     "auto-update"
   ],
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+   "gitIgnoredAuthors": ["github@glueops.dev", "vendors@glueops.dev"],
+  "rebaseWhen": "behind-base-branch",
+  "dependencyDashboardAutoclose": true,
+  "dependencyDashboard": true,
   "recreateWhen": "always",
   "argocd": {
     "fileMatch": [
