@@ -12,6 +12,10 @@
   "labels": [
     "auto-update"
   ],
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+  "rebaseWhen": "behind-base-branch",
+  "dependencyDashboardAutoclose": true,
   "recreateWhen": "always",
   "argocd": {
     "fileMatch": [
