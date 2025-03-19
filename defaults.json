@@ -16,6 +16,7 @@
   "prHourlyLimit": 0,
   "rebaseWhen": "behind-base-branch",
   "dependencyDashboardAutoclose": true,
+  "dependencyDashboard": false,
   "recreateWhen": "always",
   "argocd": {
     "fileMatch": [
