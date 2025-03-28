@@ -8,7 +8,7 @@
   ],
   "defaultRegistryUrls": [
     "https://ghcr.io/glueops/mirrors"
-  ]
+  ],
   "separateMinorPatch": true,
   "separateMultipleMajor": true,
   "separateMultipleMinor": true,
