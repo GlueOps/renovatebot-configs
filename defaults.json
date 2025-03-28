@@ -7,7 +7,7 @@
     ":pinDevDependencies"
   ],
   "defaultRegistryUrls": [
-    "https://ghcr.io/glueops/mirrors"
+    "https://ghcr.io/glueops/mirror"
   ],
   "separateMinorPatch": true,
   "separateMultipleMajor": true,
