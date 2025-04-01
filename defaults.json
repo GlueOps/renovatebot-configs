@@ -6,11 +6,6 @@
     "helpers:pinGitHubActionDigests",
     ":pinDevDependencies"
   ],
-  "defaultRegistryUrls": [
-    "https://docker.io",
-    "https://ghcr.io/glueops/mirror",
-    "https://quay.io/glueops/mirror"
-  ],
   "separateMinorPatch": true,
   "separateMultipleMajor": true,
   "separateMultipleMinor": true,
@@ -361,6 +356,17 @@
       ],
       "packageNames": [
         "argo-cd"
+      ]
+    },
+    {
+      "registryUrls": [
+        "https://ghcr.io/glueops/mirror"
+      ],
+      "matchRepositories": [
+        "GlueOps/platform-helm-chart-platform"
+      ],
+      "matchFileNames": [
+        "values.yaml"
       ]
     }
   ]
