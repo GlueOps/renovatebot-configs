@@ -6,6 +6,10 @@
     "helpers:pinGitHubActionDigests",
     ":pinDevDependencies"
   ],
+  "defaultRegistryUrls": [
+    "https://ghcr.io/glueops/mirror",
+    "https://quay.io/glueops/mirror"
+  ],
   "separateMinorPatch": true,
   "separateMultipleMajor": true,
   "separateMultipleMinor": true,
