@@ -330,14 +330,21 @@
     },
     {
       "customType": "regex",
-      "managerFilePatterns": ["/.*\\.md/"],
+      "fileMatch": [
+        "^README\\.md$"
+      ],
       "matchStrings": [
-        ".*# renovate: eksAddonsFilter=(?<packageName>.*?)\n.*?[a-zA-Z0-9-_:]*[ ]*?[:|=][ ]*?[\"|']?(?<currentValue>[a-zA-Z0-9-_.]+)[\"|']?.*"
+        "^\\s*(?<depName>.*?)_version\\s*=\\s*\"(?<currentValue>v[0-9][a-zA-Z0-9-._]+)\""
       ],
       "datasourceTemplate": "aws-eks-addon",
-      "versioningTemplate": "aws-eks-addon" 
+      "packageNameTemplate": "{\"kubernetesVersion\":\"1.30\",\"addonName\":\"{{depName}}\"}",
+      "replacements": [
+        {
+          "from": "csi_driver",
+          "to": "aws-ebs-csi-driver"
+        }
+      ]
     }
-    
   ],
   "packageRules": [
     {
