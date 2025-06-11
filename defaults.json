@@ -332,7 +332,7 @@
       "customType": "regex",
       "managerFilePatterns": ["^variables\\.tf$"],
       "matchStrings": [
-        "variable \"(?<depName>\\w+_version)\" {\\s*.*?default\\s*=\\s*\"(?<currentValue>.*?)\""
+        "(?s)variable \"(?<depName>\\w+_version)\" {.*?default\\s*=\\s*\"(?<currentValue>.*?)\""
       ],
       "datasourceTemplate": "aws-eks-addon"
     }
