@@ -330,7 +330,7 @@
     },
     {
       "customType": "regex",
-      "managerFilePatterns": ["variables\\.tf$"],
+      "managerFilePatterns": ["^variables\\.tf$"],
       "matchStrings": [
         "variable \"(?<depName>\\w+_version)\" {\\s*.*?default\\s*=\\s*\"(?<currentValue>.*?)\""
       ],
