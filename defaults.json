@@ -330,20 +330,11 @@
     },
     {
       "customType": "regex",
-      "fileMatch": [
-        "^README\\.md$"
-      ],
+      "managerFilePatterns": ["^README\\.md$"],
       "matchStrings": [
-        "^\\s*(?<depName>.*?)_version\\s*=\\s*\"(?<currentValue>v[0-9][a-zA-Z0-9-._]+)\""
+        "\\s*(?<depName>\\w+_version)\\s*=\\s*\"(?<currentValue>.*?)\""
       ],
-      "datasourceTemplate": "aws-eks-addon",
-      "packageNameTemplate": "{\"kubernetesVersion\":\"1.30\",\"addonName\":\"{{depName}}\"}",
-      "replacements": [
-        {
-          "from": "csi_driver",
-          "to": "aws-ebs-csi-driver"
-        }
-      ]
+      "datasourceTemplate": "aws-eks-addon"
     }
   ],
   "packageRules": [
@@ -388,9 +379,18 @@
     },
     {
       "matchDatasources": ["aws-eks-addon"],
-      "overrideDepName": "{{replace '.*\"addonName\":\"([^\"]+)\".*' '$1' depName}}"
+      "matchDepNames": ["csi_driver_version"],
+      "packageName": "aws-ebs-csi-driver"
+    },
+    {
+      "matchDatasources": ["aws-eks-addon"],
+      "matchDepNames": ["coredns_version"],
+      "packageName": "coredns"
+    },
+    {
+      "matchDatasources": ["aws-eks-addon"],
+      "matchDepNames": ["kube_proxy_version"],
+      "packageName": "kube-proxy"
     }
-    
-    
   ]
 }
