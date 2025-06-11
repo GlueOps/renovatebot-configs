@@ -330,11 +330,12 @@
     },
     {
       "customType": "regex",
-      "managerFilePatterns": ["^variables\\.tf$"],
+      "managerFilePatterns": ["/.*\\.md/"],
       "matchStrings": [
-        "(?s)variable \"(?<depName>\\w+_version)\" {.*?default\\s*=\\s*\"(?<currentValue>.*?)\""
+        ".*# renovate: eksAddonsFilter=(?<packageName>.*?)\n.*?[a-zA-Z0-9-_:]*[ ]*?[:|=][ ]*?[\"|']?(?<currentValue>[a-zA-Z0-9-_.]+)[\"|']?.*"
       ],
-      "datasourceTemplate": "aws-eks-addon"
+      "datasourceTemplate": "aws-eks-addon",
+      "versioningTemplate": "aws-eks-addon" 
     }
   ],
   "packageRules": [
@@ -377,20 +378,9 @@
         "values.yaml"
       ]
     },
-    {
+     {
       "matchDatasources": ["aws-eks-addon"],
-      "matchDepNames": ["csi_driver_version"],
-      "packageName": "aws-ebs-csi-driver"
-    },
-    {
-      "matchDatasources": ["aws-eks-addon"],
-      "matchDepNames": ["coredns_version"],
-      "packageName": "coredns"
-    },
-    {
-      "matchDatasources": ["aws-eks-addon"],
-      "matchDepNames": ["kube_proxy_version"],
-      "packageName": "kube-proxy"
+      "overrideDepName": "{{replace '.*\"addonName\":\"([^\"]+)\".*' '$1' depName}}"
     }
   ]
 }
