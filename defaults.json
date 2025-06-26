@@ -330,7 +330,7 @@
     },
     {
       "customType": "regex",
-      "managerFilePatterns": ["/.*\\.md/","/.*\\.tf/"],
+      "managerFilePatterns": ["/.*\\.md/","/.*\\.tf/","/.*\\.yaml/"],
       "matchStrings": [
         ".*# renovate: eksAddonsFilter=(?<packageName>.*?)\n.*?[a-zA-Z0-9-_:]*[ ]*?[:|=][ ]*?[\"|']?(?<currentValue>[a-zA-Z0-9-_.]+)[\"|']?.*"
       ],
