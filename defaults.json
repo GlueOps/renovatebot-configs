@@ -339,7 +339,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["\\.yaml$"],
+      "fileMatch": ["\\.ya?ml$"],
       "matchStrings": [
         "repoURL: 'https://github.com/(?<depName>[^/]+/[^/]+)\\.git'([\\s\\S]*?)targetRevision: (?<currentValue>.*)"
       ],
