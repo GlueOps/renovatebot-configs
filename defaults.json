@@ -336,6 +336,14 @@
       ],
       "datasourceTemplate": "aws-eks-addon",
       "versioningTemplate": "aws-eks-addon" 
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["\\.yaml$"],
+      "matchStrings": [
+        "repoURL: 'https://github.com/(?<depName>[^/]+/[^/]+)\\.git'([\\s\\S]*?)targetRevision: (?<currentValue>.*)"
+      ],
+      "datasourceTemplate": "github-releases"
     }
   ],
   "packageRules": [
@@ -381,6 +389,10 @@
      {
       "matchDatasources": ["aws-eks-addon"],
       "overrideDepName": "{{replace '.*\"addonName\":\"([^\"]+)\".*' '$1' depName}}"
+    },
+    {
+      "matchDatasources": ["github-releases"],
+      "groupName": "github-releases"
     }
   ]
 }
