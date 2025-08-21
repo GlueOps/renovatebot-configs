@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "docker:pinDigests",
+    "helpers:pinGitHubActionDigests",
+    ":pinDevDependencies"
+  ],
+  "separateMinorPatch": true,
+  "separateMultipleMajor": true,
+  "separateMultipleMinor": true,
+  "labels": [
+    "auto-update"
+  ],
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+   "gitIgnoredAuthors": ["github@glueops.dev", "vendors@glueops.dev"],
+  "rebaseWhen": "behind-base-branch",
+  "dependencyDashboardAutoclose": true,
+  "dependencyDashboard": true,
+  "recreateWhen": "always"
+}

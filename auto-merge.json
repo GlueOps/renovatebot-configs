@@ -1,9 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "branchConcurrentLimit": 50,
-  "prConcurrentLimit": 50,
-  "prHourlyLimit": 0,
-  "recreateWhen": "always",
   "customManagers": [],
   "commitMessage": "{{#if isPatch}}chore(patch): update {{depName}} to v{{newVersion}} #patch {{/if}}{{#if isPin}}chore(pin): update {{depName}} to v{{newDigestShort}} #patch {{/if}}{{#if isLockfileUpdate}}chore(lockfile): update {{depName}}-lockfile #patch {{/if}}{{#if isPinDigest}}chore(pinDigest): update {{depName}} to v{{newDigestShort}} #patch {{/if}}{{#if isMinor}}feat: update {{depName}} to v{{newVersion}} #minor {{/if}}{{#if isMajor}}BREAKING: The dependency `{{depName}}` has been updated to a new major version (v{{newVersion}}), which may include breaking changes. #major{{/if}}",
   "lockFileMaintenance": { "enabled": true },
@@ -15,7 +11,8 @@
         "digest",
         "pin",
         "pinDigest",
-        "bump"
+        "bump",
+        "minor"
       ],
       "automerge": true
     }
