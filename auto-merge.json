@@ -15,7 +15,8 @@
         "digest",
         "pin",
         "pinDigest",
-        "bump"
+        "bump",
+        "minor"
       ],
       "automerge": true
     }
