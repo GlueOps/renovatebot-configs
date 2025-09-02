@@ -10,7 +10,8 @@
         "pin",
         "pinDigest",
         "bump",
-        "minor"
+        "minor",
+        "lockFileMaintenance"
       ],
       "automerge": true
     }
