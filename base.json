@@ -18,7 +18,7 @@
   "rebaseWhen": "behind-base-branch",
   "dependencyDashboardAutoclose": true,
   "dependencyDashboard": true,
-  "recreateWhen": "always",
+  "recreateWhen": "auto",
   "commitMessage": "{{#if depName}}{{#if isPatch}}chore(patch): update {{depName}} to {{newVersion}} #patch{{else}}{{#if isPin}}chore(pin): update {{depName}} to {{newDigestShort}} #patch{{else}}{{#if isLockfileUpdate}}chore(lockfile): update {{depName}}-lockfile #patch{{else}}{{#if isPinDigest}}chore(pinDigest): update {{depName}} to {{newDigestShort}} #patch{{else}}{{#if isMinor}}feat: update {{depName}} to {{newVersion}} #minor{{else}}{{#if isMajor}}BREAKING: The dependency `{{depName}}` has been updated to a new major version ({{newVersion}}), which may include breaking changes. #major{{else}}chore(fallback): update {{depName}} {{/if}}{{/if}}{{/if}}{{/if}}{{/if}}{{/if}}{{else}}chore: Lock file maintenance{{/if}}",
   "lockFileMaintenance": { "enabled": true }
 }
