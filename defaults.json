@@ -357,17 +357,6 @@
       ]
     },
     {
-      "registryUrls": [
-        "https://ghcr.io/glueops/mirror"
-      ],
-      "matchRepositories": [
-        "GlueOps/platform-helm-chart-platform"
-      ],
-      "matchFileNames": [
-        "values.yaml"
-      ]
-    },
-     {
       "matchDatasources": ["aws-eks-addon"],
       "overrideDepName": "{{replace '.*\"addonName\":\"([^\"]+)\".*' '$1' depName}}"
     },
