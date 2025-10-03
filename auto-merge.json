@@ -19,13 +19,14 @@
       "matchUpdateTypes": ["security"],
       "automerge": true,
       "automergeType": "pr",
-      "prPriority": 100
+      "prPriority": 100,
+      "minimumReleaseAge": "0 days"
     },
     {
       "matchManagers": ["npm", "pnpm", "yarn"],
       "matchUpdateTypes": ["minor", "patch"],
       "minimumReleaseAge": "3 days"
-    },
+    }
   ],
   "extends": [
     ":semanticCommits"
