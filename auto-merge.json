@@ -23,7 +23,7 @@
     },
     {
       "matchManagers": ["npm", "pnpm", "yarn"],
-      "matchUpdateTypes": ["minor"],
+      "matchUpdateTypes": ["minor", "patch"],
       "minimumReleaseAge": "3 days"
     },
   ],
