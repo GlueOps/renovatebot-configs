@@ -32,6 +32,16 @@
   },
   "forkProcessing": "enabled",
   "customManagers": [
+     {
+      "customType": "regex",
+      "fileMatch": [
+        "^.devcontainer/Dockerfile$"
+      ],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>[^\\s]+) depName=(?<depName>[^\\s]+)(?: extractVersion=(?<extractVersion>.+))?\\s*\\nARG \\S+=(?<currentValue>.+)"
+      ],
+      "versioningTemplate": "{{#if extractVersion}}regex:{{{extractVersion}}}{{/if}}"
+    },
     {
       "customType": "regex",
       "fileMatch": [
