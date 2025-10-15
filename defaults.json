@@ -35,7 +35,7 @@
      {
       "customType": "regex",
       "fileMatch": [
-        "^.devcontainer/Dockerfile$"
+        "**/*[Dd]ockerfile*",
       ],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>[^\\s]+) depName=(?<depName>[^\\s]+)(?: extractVersion=(?<extractVersion>.+))?\\s*\\nARG \\S+=(?<currentValue>.+)"
