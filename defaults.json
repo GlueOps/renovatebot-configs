@@ -180,6 +180,18 @@
         "repoURL: 'https://github.com/(?<depName>[^/]+/[^/]+)\\.git'([\\s\\S]*?)targetRevision: (?<currentValue>.*)"
       ],
       "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "templates/application-external-dns\\.yaml$"
+      ],
+      "matchStrings": [
+        "repoURL: 'https://github\\.com/kubernetes-sigs/external-dns\\.git'[\\s\\S]*?targetRevision: external-dns-helm-chart-(?<currentValue>[\\d]+\\.[\\d]+\\.[\\d]+)"
+      ],
+      "depNameTemplate": "kubernetes-sigs/external-dns",
+      "datasourceTemplate": "github-tags",
+      "extractVersionTemplate": "^external-dns-helm-chart-(?<version>.+)$"
     }
   ],
   "packageRules": [
@@ -218,6 +230,11 @@
     {
       "matchDatasources": ["github-releases"],
       "groupName": "github-releases"
+    },
+     {
+      "matchManagers": ["argocd"],
+      "matchPackageNames": ["https://github.com/kubernetes-sigs/external-dns.git"],
+      "enabled": false
     }
   ]
 }
