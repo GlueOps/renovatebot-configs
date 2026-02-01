@@ -1,6 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "customManagers": [],
+  "branchPrefix": "renovate-automerge/",
   "packageRules": [
     {
       "description": "Automerge non-major updates",
@@ -15,7 +16,6 @@
       ],
       "automerge": true
     },
-    "branchPrefix": "renovate-automerge/",
     {
       "matchUpdateTypes": ["security"],
       "automerge": true,
