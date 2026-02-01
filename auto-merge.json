@@ -15,6 +15,7 @@
       ],
       "automerge": true
     },
+    "branchPrefix": "renovate-automerge/",
     {
       "matchUpdateTypes": ["security"],
       "automerge": true,
