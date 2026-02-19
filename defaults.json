@@ -126,7 +126,7 @@
         "^variables\\.tf$"
       ],
       "matchStrings": [
-        "\\s*glueops_platform_version\\s*=\\s*\"v?(?<currentValue>\\d+\\.\\d+\\.\\d+)\""
+        "glueops_platform_version.* = \"v?(?<currentValue>\\d+\\.\\d+\\.\\d+)\""
       ],
       "depNameTemplate": "glueops/platform-helm-chart-platform",
       "datasourceTemplate": "github-tags"
@@ -134,7 +134,7 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "^modules/tenant-readme/0.1.0/readme\\.tf$"
+        "^variables\\.tf$"
       ],
       "matchStrings": [
         "tools_version.* = \"v?(?<currentValue>\\d+\\.\\d+\\.\\d+)\\s*"
@@ -145,7 +145,7 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "^modules/tenant-readme/0.1.0/readme\\.tf$"
+        "^variables\\.tf$"
       ],
       "matchStrings": [
         "argocd_helm_chart_version.* = \"v?(?<currentValue>\\d+\\.\\d+\\.\\d+)\\s*"
@@ -156,7 +156,7 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "^generate-tenant-readmes\\.tf$"
+        "^variables\\.tf$"
       ],
       "matchStrings": [
         "argocd_app_version.* = \"v?(?<currentValue>\\d+\\.\\d+\\.\\d+)\\s*"
