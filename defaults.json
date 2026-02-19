@@ -126,7 +126,7 @@
         "^modules/tenant-readme/0.1.0/readme\\.tf$"
       ],
       "matchStrings": [
-        "glueops_platform_version.* = \"v?(?<currentValue>\\d+\\.\\d+\\.\\d+)\\s*"
+        "\\s*glueops_platform_version\\s*=\\s*\"v?(?<currentValue>\\d+\\.\\d+\\.\\d+)\""
       ],
       "depNameTemplate": "glueops/platform-helm-chart-platform",
       "datasourceTemplate": "github-tags"
