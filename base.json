@@ -14,6 +14,7 @@
   ],
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
+  "minimumReleaseAge": "30 days",
    "gitIgnoredAuthors": ["github@glueops.dev", "vendors@glueops.dev", "github-actions[bot]@users.noreply.github.com", "186083205+public-glueops-renovatebot[bot]@users.noreply.github.com"],
   "rebaseWhen": "behind-base-branch",
   "dependencyDashboardAutoclose": true,
@@ -22,5 +23,22 @@
   "commitMessage": "{{#if depName}}{{#if isPatch}}chore(patch): update {{depName}} to {{newVersion}} #patch{{else}}{{#if isPin}}chore(pin): update {{depName}} to {{newDigestShort}} #patch{{else}}{{#if isLockfileUpdate}}chore(lockfile): update {{depName}}-lockfile #patch{{else}}{{#if isPinDigest}}chore(pinDigest): update {{depName}} to {{newDigestShort}} #patch{{else}}{{#if isMinor}}feat: update {{depName}} to {{newVersion}} #minor{{else}}{{#if isMajor}}BREAKING: The dependency `{{depName}}` has been updated to a new major version ({{newVersion}}), which may include breaking changes. #major{{else}}chore(fallback): update {{depName}} {{/if}}{{/if}}{{/if}}{{/if}}{{/if}}{{/if}}{{else}}chore: Lock file maintenance{{/if}}",
   "lockFileMaintenance": { "enabled": true },
   "forkProcessing": "enabled",
-  "includeForks": true
+  "includeForks": true,
+  "packageRules": [
+    {
+      "description": "Immediate updates for GlueOps-owned packages",
+      "matchPackageNames": [
+        "glueops/**",
+        "ghcr.io/glueops/**",
+        "ghcr.repo.gpkg.io/glueops/**"
+      ],
+      "minimumReleaseAge": "0 days"
+    },
+    {
+      "description": "Immediate updates for Helm charts from gpkg.io",
+      "matchDatasources": ["helm"],
+      "matchRegistryUrls": ["https://**.gpkg.io/**"],
+      "minimumReleaseAge": "0 days"
+    }
+  ]
 }
