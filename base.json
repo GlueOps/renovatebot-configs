@@ -15,6 +15,7 @@
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
   "minimumReleaseAge": "30 days",
+  "internalChecksFilter": "strict",
    "gitIgnoredAuthors": ["github@glueops.dev", "vendors@glueops.dev", "github-actions[bot]@users.noreply.github.com", "186083205+public-glueops-renovatebot[bot]@users.noreply.github.com"],
   "rebaseWhen": "behind-base-branch",
   "dependencyDashboardAutoclose": true,
