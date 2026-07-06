@@ -192,6 +192,17 @@
       "depNameTemplate": "kubernetes-sigs/external-dns",
       "datasourceTemplate": "github-tags",
       "extractVersionTemplate": "^external-dns-helm-chart-(?<version>.+)$"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "\\.md$",
+        "\\.tf$"
+      ],
+      "matchStrings": [
+        "gluekube_docker_image\\s*=\\s*\"(?<depName>[^\"]+)\"\\s*\\n\\s*gluekube_docker_tag\\s*=\\s*\"(?<currentValue>[^\"]+)\""
+      ],
+      "datasourceTemplate": "docker"
     }
   ],
   "packageRules": [
