@@ -6,9 +6,9 @@
     "helpers:pinGitHubActionDigests",
     ":pinDevDependencies"
   ],
-  "separateMinorPatch": true,
+  "separateMinorPatch": false,
   "separateMultipleMajor": true,
-  "separateMultipleMinor": true,
+  "separateMultipleMinor": false,
   "labels": [
     "auto-update"
   ],
