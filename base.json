@@ -40,6 +40,11 @@
       "matchDatasources": ["helm"],
       "matchRegistryUrls": ["https://**.gpkg.io/**"],
       "minimumReleaseAge": "0 days"
+    },
+    {
+      "description": "Faster updates for Claude Code (7 days instead of the default 30)",
+      "matchPackageNames": ["@anthropic-ai/claude-code"],
+      "minimumReleaseAge": "7 days"
     }
   ]
 }
