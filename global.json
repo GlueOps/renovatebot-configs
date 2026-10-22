@@ -1,0 +1,5 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Global-only options. Load via RENOVATE_GLOBAL_EXTENDS, not extends: presets in extends become repository config, where global-only options are rejected.",
+  "dockerMaxPages": 50
+}
