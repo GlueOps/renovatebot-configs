@@ -187,7 +187,7 @@
         "templates/application-external-dns\\.yaml$"
       ],
       "matchStrings": [
-        "repoURL: 'https://github\\.com/kubernetes-sigs/external-dns\\.git'[\\s\\S]*?targetRevision: external-dns-helm-chart-(?<currentValue>[\\d]+\\.[\\d]+\\.[\\d]+)"
+        "repoURL: '?https://github\\.com/kubernetes-sigs/external-dns(?:\\.git)?'?\\s[\\s\\S]*?targetRevision: external-dns-helm-chart-(?<currentValue>[\\d]+\\.[\\d]+\\.[\\d]+)"
       ],
       "depNameTemplate": "kubernetes-sigs/external-dns",
       "datasourceTemplate": "github-tags",
@@ -244,7 +244,7 @@
     },
      {
       "matchManagers": ["argocd"],
-      "matchPackageNames": ["https://github.com/kubernetes-sigs/external-dns.git"],
+      "matchPackageNames": ["https://github.com/kubernetes-sigs/external-dns", "https://github.com/kubernetes-sigs/external-dns.git"],
       "enabled": false
     }
   ]
