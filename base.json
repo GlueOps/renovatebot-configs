@@ -25,7 +25,6 @@
   "semanticCommits": "enabled",
   "lockFileMaintenance": { "enabled": true },
   "forkProcessing": "enabled",
-  "includeForks": true,
   "packageRules": [
     {
       "description": "Immediate updates for GlueOps-owned packages",
