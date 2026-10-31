@@ -47,9 +47,10 @@
       "minimumReleaseAge": "0 days"
     },
     {
-      "description": "Conventional PR titles for release-please (squash commit = PR title): all other updates are chore(deps), a patch release",
+      "description": "Conventional PR titles for release-please (squash commit = PR title): all other updates are deps:, a patch release under Dependencies. Empty scope avoids deps(deps):",
       "matchUpdateTypes": ["patch", "pin", "pinDigest", "digest", "lockFileMaintenance", "rollback", "bump", "replacement"],
-      "semanticCommitType": "chore"
+      "semanticCommitType": "deps",
+      "semanticCommitScope": ""
     },
     {
       "description": "Minor and major dependency updates are feat(deps), a minor release. No '!': a dependency major is not a breaking change to this repo",
